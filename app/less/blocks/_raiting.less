@@ -1,0 +1,70 @@
+.rating-container{
+  .clearfix:before,
+  .clearfix:after {
+    content: " ";
+    display: table;
+  }
+  .clearfix:after {clear: both;}
+
+
+  .rating {
+    position: relative;
+    width: 80px;
+    height: 10px;
+    list-style: none;
+    background: url(../img/star-sprite/star-sprite.png) left top;
+  }
+  .rating li {
+    float: left;
+    height: 10px;
+  }
+
+  .rating li.current {
+    z-index: 1;
+    background: url(../img/star-sprite/star-sprite.png) left bottom;
+  }
+  .rating li span[class*="star"] {
+    position: absolute;
+    z-index: 5;
+    display: block;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+  }
+  .rating li span[class*="star"]:hover {
+    left: 0;
+    z-index: 2;
+    background: url(../img/star-sprite/star-sprite.png) left bottom;
+  }
+
+  .rating li span.star1 {
+    left: 0;
+  }
+  .rating li span.star1:hover {
+    width: 16px;
+  }
+  .rating li span.star2 {
+    left: 16px;
+  }
+  .rating li span.star2:hover {
+    width: 32px;
+  }
+  .rating li span.star3 {
+    left: 32px;
+  }
+  .rating li span.star3:hover {
+    width: 48px;
+  }
+  .rating li span.star4 {
+    left: 48px;
+  }
+  .rating li span.star4:hover {
+    width: 64px;
+  }
+  .rating li span.star5 {
+    left: 64px;
+  }
+  .rating li span.star5:hover {
+    width: 80px;
+  }
+}
