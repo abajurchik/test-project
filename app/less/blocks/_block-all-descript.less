@@ -1,0 +1,24 @@
+.all-characteristics{
+  position: relative;
+  margin-bottom: 50px;
+  cursor: pointer;
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top:5px;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    background-image: url("../img/icons/red-check.png");
+    background-repeat: no-repeat;
+  }
+  span{
+    border-bottom: 1px solid #eff0f3;
+    margin-left: 15px;
+    transition: all 0.8s;
+    &:hover{
+      border-bottom: 1px solid @hover-nav;
+    }
+  }
+}
