@@ -93,4 +93,105 @@
       }
     }
   }
+  .description-product__reviews-content{
+    display: flex;
+    padding: 30px;
+    border: 1px solid @color-cod-product;
+    border-bottom: none;
+    &:last-of-type{
+      border-bottom: 1px solid @color-cod-product;
+      margin-bottom: 20px;
+    }
+    .reviews-content{
+      border-right: 1px solid #eff0f3;
+      width: 720px;
+      padding-right: 25px;
+    }
+    .reviews-content__user-name--date{
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 15px;
+      .date{
+        margin-left: 25px;
+        color: @text-color;
+      }
+    }
+    .reviews-content__text{
+      line-height: 1.6em;
+      margin-bottom: 15px;
+    }
+    .reviews-content__advantages{
+      margin-bottom: 20px;
+      span{
+        color: #57ae85;
+      }
+    }
+    .reviews-content__disadvantages{
+      margin-bottom: 20px;
+      span{
+        color: @hover-nav;
+      }
+    }
+    .reviews-content__answers{
+      display: flex;
+      justify-content: space-between;
+      .reviews-content__answers-answer{
+        display: flex;
+        justify-content: flex-start;
+        font-weight: 700;
+        .answer{
+          cursor: pointer;
+        }
+        .reply{
+          margin-left: 35px;
+          cursor: pointer;
+        }
+      }
+      .reviews-content__answers-question{
+        color: @text-color;
+        span{
+          display: inline-block;
+          margin-left: 40px;
+          cursor: pointer;
+          font-weight: 700;
+          position: relative;
+          &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            left: -25px;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+          }
+        }
+        .like{
+          color: #57ae85;
+          &:before{
+            background-image: url("../img/icons/like.png");
+            top: -4px;
+          }
+        }
+        .dislike{
+          color: @hover-nav;
+          &:before{
+            background-image: url("../img/icons/dislike.png");
+            top: 0;
+          }
+        }
+      }
+    }
+    .raiting-product{
+      padding-left: 25px;
+      width: 150px;
+      .raiting-product__title{
+        margin-bottom: 15px;
+      }
+      .rating-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
 }
