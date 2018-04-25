@@ -33,6 +33,7 @@
   }
   .w930{
     width: 930px;
+    overflow: hidden;
   }
   .description-product__characteristics{
     .description-product__characteristics-title{
@@ -195,6 +196,71 @@
         justify-content: space-between;
         align-items: center;
       }
+    }
+  }
+  .description-product__video-reviews{
+    margin-bottom: 40px;
+    .video-reviews__title{
+      margin-bottom: 10px;
+    }
+    .video-reviews__container{
+      display: flex;
+      justify-content: space-between;
+      .video-block{
+        cursor: pointer;
+      }
+      img{
+        width: 455px;
+        height: 300px;
+      }
+    }
+  }
+  .wrap-articles-content{
+    display: flex;
+    justify-content: flex-start;
+  }
+  .description-product__articles-title{
+    margin-bottom: 10px;
+  }
+  .description-product__articles{
+    margin-bottom: 55px;
+
+    .description-product__articles-container{
+      display: flex;
+      width: 685px;
+      height: 240px;
+      border: 1px solid #eff0f3;
+      margin-right: 20px;
+      .articles-img{
+
+      }
+      .articles-content{
+        padding: 25px 20px 25px 30px;
+
+        .articles-content__data{
+          font-size: 12px;
+          color: @text-color;
+          margin-bottom: 10px;
+        }
+        .articles-content__title{
+          margin-bottom: 15px;
+        }
+        .articles-content__text{
+          line-height: 1.5em;
+          overflow: hidden;
+          height: 80px;
+        }
+      }
+    }
+  }
+  .description-product__certificates{
+    margin-bottom: 75px;
+    .description-product__certificates-title{
+      margin-bottom: 10px;
+    }
+    .product-certificates__container{
+      display: flex;
+      justify-content: space-between;
     }
   }
 }

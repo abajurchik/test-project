@@ -44,3 +44,61 @@
     }
   }
 }
+.compare{
+  position: relative;
+  cursor: pointer;
+  &:before{
+    content: '';
+    display: block;
+    width: 27px;
+    height: 25px;
+    background: url("../../img/icons/share-compare.png") no-repeat right top;
+    position: absolute;
+    left: -28px;
+    top: -5px;
+    cursor: pointer;
+  }
+}
+.share{
+  margin: 0 70px 0 25px;
+  position: relative;
+  cursor: pointer;
+  &:before{
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url("../../img/icons/share-compare.png") no-repeat left top;
+    position: absolute;
+    left: -28px;
+    top: -5px;
+  }
+}
+.review {
+  margin-right: 50px;
+  &:before {
+    background: url("../../img/icons/sprait-quest-rev.png") no-repeat left top;
+  }
+}
+.questions {
+  &:before {
+    background: url("../../img/icons/sprait-quest-rev.png") no-repeat right top;
+  }
+}
+.questions, .review {
+  border-bottom: 1px solid @text-color;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.8s;
+  &:before {
+    content: '';
+    display: block;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: -18px;
+  }
+  &:focus, &:hover, &:active{
+    border-bottom: 1px solid @hover-nav;
+  }
+}
