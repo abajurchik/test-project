@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="css/reset.css"/>
 	<link rel="stylesheet" href="css/main.css"/>
 	<link rel="stylesheet" href="libs/owl-carusel/owl.carousel.css"/>
+	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
 	<!--load everything-->
 	<!--[if lt IE 9]>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
@@ -146,15 +148,36 @@
 			<div class="img-product">
 				<div class="img-product__small">
 					<ul>
-						<li><img src="img/small-img/mobil1-5w30-small.jpg" alt=""></li>
-						<li><img src="img/small-img/3D-product.jpg" alt=""></li>
-						<li><img src="img/small-img/video-product.jpg" alt=""></li>
-						<li><img src="img/small-img/placehold-product.jpg" alt=""></li>
-						<li><img src="img/small-img/placehold-product.jpg" alt=""></li>
+						<li>
+							<a href="img/products/mobil1-5w30.jpg" data-fancybox="images" class="fancybox" rel="group">
+								<img src="img/small-img/mobil1-5w30-small.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<img src="img/small-img/3D-product.jpg" alt="">
+						</li>
+						<li>
+							<a data-fancybox href="https://www.youtube.com/embed/c5fKqmXh7W8" rel="group">
+								<img src="img/small-img/video-product.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="img/products/mobil1-5w30.jpg" class="fancybox" data-fancybox="images" rel="group">
+								<img src="img/small-img/placehold-product.jpg" alt="">
+							</a>
+
+						</li>
+						<li>
+							<a href="img/products/mobil1-5w30.jpg" class="fancybox" data-fancybox="images" rel="group">
+								<img src="img/small-img/placehold-product.jpg" alt="">
+							</a>
+						</li>
 					</ul>
 				</div>
 				<div class="img-product__big">
-					<img src="img/products/mobil1-5w30.jpg" alt="масло">
+					<a href="img/products/mobil1-5w30.jpg" class="fancybox" data-fancybox="images" rel="group">
+						<img src="img/products/mobil1-5w30.jpg" alt="масло">
+					</a>
 				</div>
 			</div>
 			<div class="information-product">
@@ -385,15 +408,15 @@
 	<section class="description-product">
 		<div class="description-product__nav">
 			<ul class="description-product__nav-list">
-				<li class="description-product__nav-items"><span class="active filter">Характеристики</span></li>
-				<li class="description-product__nav-items"><span>Описание</span></li>
-				<li class="description-product__nav-items"><span>Отзывы и вопросы <small>(40)</small></span></li>
-				<li class="description-product__nav-items"><span>Видеообзоры и статьи</span></li>
-				<li class="description-product__nav-items"><span>Сертификаты</span></li>
+				<li class="description-product__nav-items"><span class="active filter" data-filter=".characteristic-filter">Характеристики</span></li>
+				<li class="description-product__nav-items"><span class="filter" data-filter=".description-filter">Описание</span></li>
+				<li class="description-product__nav-items"><span class="filter" data-filter=".review-filter">Отзывы и вопросы <small>(40)</small></span></li>
+				<li class="description-product__nav-items"><span class="filter" data-filter=".video-articles-filter">Видеообзоры и статьи</span></li>
+				<li class="description-product__nav-items"><span class="filter" data-filter=".certificats-filter">Сертификаты</span></li>
 			</ul>
 		</div>
 		<div id="filter-project" class="w930">
-			<div class="description-product__characteristics">
+			<div class="description-product__characteristics mix characteristic-filter">
 				<div class="description-product__characteristics-title title2">
 					Характеристики товара
 				</div>
@@ -429,7 +452,7 @@
 				</table>
 				<div class="all-characteristics"><span>Показать все характеристики</span></div>
 			</div>
-			<div class="description-product__product-description">
+			<div class="description-product__product-description mix description-filter">
 				<div class="description-product__product-description_title title2">
 					Описание товара
 				</div>
@@ -445,7 +468,7 @@
 				<div class="all-characteristics"><span>Подробнее</span></div>
 			</div>
 
-			<div class="description-product__reviews">
+			<div class="description-product__reviews mix review-filter">
 				<div class="description-product__reviews-nav">
 					<div class="flex-group">
 						<div class="review reviews-nav-element active">Отзывы</div>
@@ -590,7 +613,7 @@
 			</div>
 
 
-			<div class="description-product__video-reviews">
+			<div class="description-product__video-reviews mix video-articles-filter">
 				<div class="video-reviews__title title2">
 					Видеообзоры <span>(2)</span>
 				</div>
@@ -603,7 +626,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="wrap-articles">
+			<div class="wrap-articles mix video-articles-filter">
 				<div class="description-product__articles-title title2">
 					Статьи <span>(2)</span>
 				</div>
@@ -659,7 +682,7 @@
 
 			</div>
 
-			<div class="description-product__certificates">
+			<div class="description-product__certificates mix certificats-filter">
 				<div class="description-product__certificates-title title2">Сертификаты соответствия</div>
 				<div class="product-certificates__container">
 					<img src="img/diploms/sertificat1.jpg" alt="">
@@ -1105,6 +1128,8 @@
 
 <script src="libs/jquery/jquery.min.js"></script>
 <script src="libs/owl-carusel/owl.carousel.min.js"></script>
+<script src="libs/mixitup/jquery.mixitup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
 <script src="js/main.js"></script>
 
 
